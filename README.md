@@ -1,5 +1,5 @@
 
-This project is an example of **RESTful Routing** with CRUD operations where you can:
+This project is an example of **RESTful Routing** where you can:
 - Read
 - Write
 - Update
