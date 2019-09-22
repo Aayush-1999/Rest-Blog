@@ -9,7 +9,7 @@ const express         = require("express"),
 mongoose.set('useFindAndModify', false)
 mongoose.connect("mongodb://127.0.0.1/blogapp",{useNewUrlParser:true});
 app.set("view engine","ejs");
-app.use(express.static("public"));
+app.use(express.static(__dirname+"/public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
 app.use(methodOverride("_method"));

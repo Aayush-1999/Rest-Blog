@@ -1,6 +1,16 @@
 .container.main{
-    margin-top: 5em;
+    margin-top: 5em !important;
 }
 #delete{
     display:inline;
+}
+.header{
+    text-align: center !important;
+}
+.content{
+    margin: 1em 1em;
+}
+.description{
+    margin: 1em 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
