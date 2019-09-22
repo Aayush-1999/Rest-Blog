@@ -1,6 +1,6 @@
-var mongoose=require("mongoose");
+const mongoose=require("mongoose");
 
-var blogSchema=new mongoose.Schema({
+const blogSchema=new mongoose.Schema({
     title:String,
     image:String,
     body:String,
