@@ -1,9 +1,10 @@
-var express=require("express"),
-expressSanitizer=require("express-sanitizer"),
-methodOverride=require("method-override"),
-mongoose=require("mongoose"),
-bodyParser=require("body-parser"),
-app = express();
+var express           = require("express"),
+    expressSanitizer  = require("express-sanitizer"),
+    methodOverride    = require("method-override"),
+    mongoose          = require("mongoose"),
+    bodyParser        = require("body-parser"),
+    Blog              = require("./models/blog");
+    app               = express();
 
 mongoose.set('useFindAndModify', false)
 mongoose.connect("mongodb://127.0.0.1/blogapp",{useNewUrlParser:true});
@@ -12,14 +13,6 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
 app.use(methodOverride("_method"));
-
-var blogSchema=new mongoose.Schema({
-    title:String,
-    image:String,
-    body:String,
-    created: {type : Date,default: Date.now}
-});
-var Blog=mongoose.model("blog",blogSchema);
 
 app.get("/",function(req,res){
     res.redirect("/blogs");
